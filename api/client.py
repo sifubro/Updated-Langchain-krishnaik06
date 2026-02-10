@@ -1,6 +1,8 @@
 import requests
 import streamlit as st
 
+# This is the Web/Mobile App 
+
 def get_openai_response(input_text):
     response=requests.post("http://localhost:8000/essay/invoke",
     json={'input':{'topic':input_text}})
@@ -25,3 +27,4 @@ if input_text:
 
 if input_text1:
     st.write(get_ollama_response(input_text1))
+
