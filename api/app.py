@@ -7,6 +7,8 @@ import os
 from langchain_community.llms import Ollama
 from dotenv import load_dotenv
 
+# Responsible for creating all the APIs
+
 load_dotenv()
 
 os.environ['OPENAI_API_KEY']=os.getenv("OPENAI_API_KEY")
@@ -49,4 +51,5 @@ add_routes(
 
 if __name__=="__main__":
     uvicorn.run(app,host="localhost",port=8000)
+
 
